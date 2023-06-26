@@ -1,0 +1,24 @@
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "first_name": "Karthik",
+    "last_name": "Donthaboyina",
+    "email": "karthik@gmail.com"
+}
+
+###
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/actors
+
+###
+GET http://localhost:3000/cities
+
+###
+GET http://localhost:3000/countries
+
+###
+GET http://localhost:3000/actors/8
