@@ -1,7 +1,11 @@
 const { DataTypes,Model } = require('sequelize')
 const sequelize = require('../dbConnection')
 
-class actor extends Model{}
+class actor extends Model{
+    static associate(models){
+        actor.belongsToMany(models.film, { through: "filmActor" })
+    }
+}
 
 actor.init({
     actor_id: {

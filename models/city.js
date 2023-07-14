@@ -1,7 +1,11 @@
 const { DataTypes,Model } = require('sequelize')
 const sequelize = require('../dbConnection')
 
-class city extends Model{}
+class city extends Model{
+    static associate(models) {
+        city.belongsTo(models.country, { foreignKey: 'country_id', as: 'location' })
+    }
+}
 
 city.init({
     city_id: {
@@ -32,6 +36,5 @@ city.init({
     sequelize,
     modelName: 'city'
 })
-
 
 module.exports = city

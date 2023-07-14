@@ -15,10 +15,22 @@ GET http://localhost:3000/users
 GET http://localhost:3000/actors
 
 ###
-GET http://localhost:3000/cities
-
-###
 GET http://localhost:3000/countries
 
 ###
 GET http://localhost:3000/actors/8
+
+###
+GET http://localhost:3000/films
+
+###
+GET http://localhost:3000/film-actors
+
+
+###
+GET http://localhost:3000/actor-movies
+
+
+# --------------------------------------
+###
+GET http://localhost:3000/api/advanced/joins/cities

@@ -1,7 +1,11 @@
 const { DataTypes,Model } = require('sequelize')
 const sequelize = require('../dbConnection')
 
-class country extends Model{}
+class country extends Model{
+    static associate(models) {
+        country.hasMany(models.city, { foreignKey: 'country_id' }) //Even if we didn't specify this cities api works
+    }
+}
 
 country.init({
     country_id: {
@@ -25,6 +29,5 @@ country.init({
     sequelize,
     modelName: 'country'
 })
-
 
 module.exports = country
